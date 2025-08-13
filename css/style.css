@@ -43,9 +43,18 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #0f1628, #1d2640);
+    background: linear-gradient(270deg, #c961de, #2f2f8a, #1c1c65);
     text-align: center;
     padding: 0 20px;
+    background-size: 600% 600%;
+  animation: heroGradient 6s ease infinite;
+}
+
+
+@keyframes heroGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero-content h1 {
