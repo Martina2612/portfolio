@@ -3,108 +3,240 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Analista en Sistemas</title>
+    <title>Portfolio - Martina Pariso dos Santos</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
 
-    <!-- Navbar -->
-    <header>
-        <div class="logo">AP</div>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">PORTFOLIO</div>
         <nav>
-            <a href="#about">Sobre mí</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#contact">Contacto</a>
+            <a href="#about">About me</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero -->
-    <section class="hero" id="about">
-        <div class="hero-content fade-in">
-            <h1>Creando Experiencias Digitales de Impacto</h1>
-            <p>Soy Analista en Sistemas con experiencia en desarrollo de software, bases de datos y diseño de interfaces intuitivas. Me apasiona crear soluciones eficientes y funcionales para negocios y usuarios.</p>
+    <section class="hero" id="principal">
+        <div class="hero-content">
+            <h1>Martina Pariso dos Santos</h1>
+            <p>Seeking to create efficient, creative, and functional solutions for businesses and users.</p>
+            <div class="scroll-arrow-container">
+                <a href="#about" class="scroll-arrow">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-content animate-in">
+            <h2>About me</h2>
+            <p>I'm a 21-year-old fourth-year Software Engineering student at UADE University in Argentina. I graduated a year ago with a degree in Systems Analyst. I consider myself passionate about the pursuit of knowledge and improving processes to achieve more creative and faster solutions.</p>
         </div>
     </section>
 
     <!-- Projects -->
-    <section class="section" id="projects">
-        <h2 class="section-title">Proyectos</h2>
-        <div class="projects">
-            <div class="project-card slide-up">
-                <img src="img/proyecto1.jpg" alt="Proyecto 1">
-                <div class="content">
-                    <h3>YelpCamp</h3>
-                    <p>Aplicación web para descubrir, reseñar y compartir experiencias de campamentos con autenticación y mapas interactivos.</p>
-                    <div class="tags">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">JWT</span>
-                    </div>
+    <!-- Projects -->
+<section class="section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+        <!-- Proyecto 1: YelpCamp -->
+        <div class="project-card animate-left">
+            <div class="carousel-container">
+                <div class="carousel-track" data-carousel="0">
+                    <img src="img/saborchef1.png" alt="YelpCamp - Vista principal" class="carousel-image active">
+                    <img src="img/saborchef2.png" alt="YelpCamp - Mapa interactivo" class="carousel-image">
+                    <img src="img/saborchef3.png" alt="YelpCamp - Detalles del campamento" class="carousel-image">
+                </div>
+                <button class="carousel-btn carousel-prev" data-carousel-prev="0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" data-carousel-next="0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel-indicators" data-indicators="0">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
                 </div>
             </div>
-            <div class="project-card slide-up">
-                <img src="img/proyecto2.jpg" alt="Proyecto 2">
-                <div class="content">
-                    <h3>Complaint System</h3>
-                    <p>Plataforma para gestionar quejas de edificios con roles de administrador y residentes, carga de archivos y notificaciones.</p>
-                    <div class="tags">
-                        <span class="tag">Spring Boot</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card slide-up">
-                <img src="img/proyecto3.jpg" alt="Proyecto 3">
-                <div class="content">
-                    <h3>Algorithms Cup</h3>
-                    <p>Competencia universitaria de programación en Python resolviendo problemas complejos con algoritmos eficientes.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Algoritmos</span>
-                    </div>
+            <div class="project-content">
+                <h3>SaborChef App</h3>
+                <p>App mobile for cooking recipes and courses. It has different user profiles, QR scanning to record course attendance, recipe search and favorites section.</p>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Android Studio</span>
+                    <span class="tag">JWT</span>
+                    <span class="tag">PostgreSQL</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Proyecto 2: Complaint System -->
+        <div class="project-card animate-in">
+            <div class="carousel-container">
+                <div class="carousel-track" data-carousel="1">
+                    <img src="img/sentiment1.png" alt="Complaint System - Dashboard" class="carousel-image active">
+                    <img src="img/sentiment2.png" alt="Complaint System - Formulario" class="carousel-image">
+                </div>
+                <button class="carousel-btn carousel-prev" data-carousel-prev="1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" data-carousel-next="1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel-indicators" data-indicators="1">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Sentiment</h3>
+                <p>Desktop application that automates the process of obtaining and classifying customer comments
+users on social media about a certain company and displays them in a wide variety of graphs (bar chart, pie chart)
+ keyword. The opinions or comments will be organized into three categories: negative, positive and neutral.</p>
+                <div class="tags">
+                    <span class="tag">Web Scraping</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Natural Language Processing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 3: Algorithms Cup -->
+        <div class="project-card animate-right">
+            <div class="carousel-container">
+                <div class="carousel-track" data-carousel="2">
+                    <img src="img/pluma1.png" alt="Algorithms Cup - Competencia" class="carousel-image active">
+                    <img src="img/pluma2.png" alt="Algorithms Cup - Código" class="carousel-image">
+                    <img src="img/pluma3.png" alt="Algorithms Cup - Resultados" class="carousel-image">
+                    <img src="img/pluma4.png" alt="Algorithms Cup - Resultados" class="carousel-image">
+                </div>
+                <button class="carousel-btn carousel-prev" data-carousel-prev="2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" data-carousel-next="2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel-indicators" data-indicators="2">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>La pluma encantada</h3>
+                <p>Website for purchasing books and stock management. It has two types of users: administrators and buyers.</p>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Javascript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Redux</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">JWT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Skills -->
     <section class="section" id="skills">
-        <h2 class="section-title">Habilidades</h2>
+        <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <h4>Frontend</h4>
+            <div class="skill-card animate-left">
+                <h4>Programming Languages</h4>
                 <ul>
-                    <li>React.js</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
                 </ul>
             </div>
-            <div class="skill-card fade-in">
+            <div class="skill-card animate-in">
                 <h4>Backend</h4>
                 <ul>
                     <li>Node.js</li>
                     <li>Spring Boot</li>
                 </ul>
             </div>
-            <div class="skill-card fade-in">
-                <h4>Bases de Datos</h4>
+            <div class="skill-card animate-right">
+                <h4>Frontend & UI</h4>
                 <ul>
-                    <li>SQL</li>
-                    <li>MongoDB</li>
-                    <li>Redis</li>
+                    <li>React.js</li>
+                    <li>Android Studio</li>
+                    <li>HTML / CSS</li>
                 </ul>
             </div>
-            <div class="skill-card fade-in">
-                <h4>Lenguajes</h4>
+            <div class="skill-card animate-left">
+                <h4>DataBases</h4>
                 <ul>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>Python</li>
+                    <li>SQL (Relational Databases)</li>
+                    <li>NoSQL: MongoDB, Redis, Neo4j, Cassandra</li>
+                    <li>DBMS: PostgreSQL, MySQL</li>
+                </ul>
+            </div>
+            <div class="skill-card animate-in">
+                <h4>Project Management</h4>
+                <ul>
+                    <li>Trello</li>
+                    <li>Notion</li>
+                    <li>Miro</li>
+                </ul>
+            </div>
+            <div class="skill-card animate-right">
+                <h4>Design & Media</h4>
+                <ul>
+                    <li>AutoCAD</li>
+                    <li>Figma</li>
+                    <li>Canva</li>
+                    <li>Photo and video editing</li>
+                </ul>
+            </div>
+            <div class="skill-card animate-left">
+                <h4>Productivity and tools</h4>
+                <ul>
+                    <li>Office Package</li>
+                    <li>Git and GitHub</li>
+                    <li>Object-oriented Paradigm</li>
+                    <li>Agile Methodologies</li>
+                </ul>
+            </div>
+            <div class="skill-card animate-left">
+                <h4>Soft skills</h4>
+                <ul>
+                    <li>Assertive communication</li>
+                    <li>Adaptability</li>
+                    <li>Problem-solving</li>
+                    <li>Teamwork</li>
                 </ul>
             </div>
         </div>
@@ -112,10 +244,162 @@
 
     <!-- Footer -->
     <footer id="contact">
-        <p>© 2025 Tu Nombre - Analista en Sistemas</p>
-        <p>Email: tuemail@example.com</p>
+        <p>© 2025 Martina Pariso dos Santos - Analista en Sistemas</p>
+        <p>Email: martinapds2612@gmail.com</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Efecto de partículas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Efecto scroll en header
+        function handleScroll() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+
+        // Scroll suave para enlaces
+        function smoothScroll() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Animaciones al hacer scroll
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observar elementos con animación
+            const animatedElements = document.querySelectorAll('.project-card, .skill-card');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        }
+
+        // Carousel functionality
+function initCarousels() {
+    const carousels = document.querySelectorAll('[data-carousel]');
+    
+    carousels.forEach((carousel, carouselIndex) => {
+        const images = carousel.querySelectorAll('.carousel-image');
+        const prevBtn = document.querySelector(`[data-carousel-prev="${carouselIndex}"]`);
+        const nextBtn = document.querySelector(`[data-carousel-next="${carouselIndex}"]`);
+        const indicators = document.querySelectorAll(`[data-indicators="${carouselIndex}"] .indicator`);
+        
+        let currentSlide = 0;
+        
+        // Añadir manejo de error para imágenes
+        images.forEach((img, index) => {
+            img.onerror = function() {
+                this.style.background = `linear-gradient(135deg, #00d4ff, #7c3aed)`;
+                this.style.display = 'flex';
+                this.style.alignItems = 'center';
+                this.style.justifyContent = 'center';
+                this.innerHTML = `<span style="color:white;font-size:2rem;">📸</span>`;
+            };
+        });
+        
+        function showSlide(slideIndex) {
+            // Remove active class from all
+            images.forEach(img => img.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current
+            if (images[slideIndex]) {
+                images[slideIndex].classList.add('active');
+            }
+            if (indicators[slideIndex]) {
+                indicators[slideIndex].classList.add('active');
+            }
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % images.length;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + images.length) % images.length;
+            showSlide(currentSlide);
+        }
+        
+        // Event listeners
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+        
+        // Initialize first slide
+        showSlide(0);
+    });
+}
+
+        // Inicializar todo
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            smoothScroll();
+            observeElements();
+            initCarousels();
+            window.addEventListener('scroll', handleScroll);
+        });
+
+        // Efecto hover en las cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card, .skill-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
