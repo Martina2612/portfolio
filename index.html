@@ -405,9 +405,15 @@ function initCarousels() {
     
     carousels.forEach((carousel, carouselIndex) => {
         const images = carousel.querySelectorAll('.carousel-image');
-        const prevBtn = document.querySelector(`[data-carousel-prev="${carouselIndex}"]`);
-        const nextBtn = document.querySelector(`[data-carousel-next="${carouselIndex}"]`);
-        const indicators = document.querySelectorAll(`[data-indicators="${carouselIndex}"] .indicator`);
+        const prevBtn = carousel.closest('.carousel-container')
+            .querySelector('.carousel-prev');
+
+        const nextBtn = carousel.closest('.carousel-container')
+            .querySelector('.carousel-next');
+
+        const indicators = carousel.closest('.carousel-container')
+            .querySelectorAll('.indicator');
+
         
         let currentSlide = 0;
         

@@ -338,6 +338,16 @@ nav a:hover::after {
     gap: 2rem;
 }
 
+.projects > .project-card:nth-last-child(2),
+.projects > .project-card:last-child {
+    grid-column: span 1;
+}
+
+.projects {
+    justify-items: center;
+}
+
+
 .project-card {
     background: var(--card-bg);
     border-radius: 20px;
