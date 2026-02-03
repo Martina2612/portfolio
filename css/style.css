@@ -338,15 +338,21 @@ nav a:hover::after {
     gap: 2rem;
 }
 
-.projects > .project-card:nth-last-child(2),
+/* Centrar las últimas dos cards */
+.projects > .project-card:nth-last-child(2) {
+    grid-column: 1 / 2;
+}
+
 .projects > .project-card:last-child {
-    grid-column: span 1;
+    grid-column: 2 / 3;
 }
 
-.projects {
-    justify-items: center;
+@media (max-width: 1200px) {
+    .projects > .project-card:nth-last-child(2),
+    .projects > .project-card:last-child {
+        grid-column: auto;
+    }
 }
-
 
 .project-card {
     background: var(--card-bg);
