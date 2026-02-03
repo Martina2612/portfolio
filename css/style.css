@@ -334,9 +334,11 @@ nav a:hover::after {
 /* Projects */
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
+
 
 /* Centrar las últimas dos cards */
 .projects > .project-card:nth-last-child(2) {
